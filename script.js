@@ -4,7 +4,7 @@ const TicTacToeGame = (function () {
     let gameActive = true;
     let firstPlayerType = 'human'; 
     let secondPlayerType = 'human'; 
-
+ytufy6t
     function makeMove(cellIndex) {
         if (gameBoard[cellIndex] === '' && gameActive) {
             gameBoard[cellIndex] = currentPlayer;
