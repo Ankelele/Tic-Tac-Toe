@@ -2,9 +2,9 @@ const TicTacToeGame = (function () {
     let currentPlayer = 'X';
     let gameBoard = ['', '', '', '', '', '', '', '', ''];
     let gameActive = true;
-    let firstPlayerType = 'human'; 
-    let secondPlayerType = 'human'; 
-ytufy6t
+    let firstPlayerType = 'human';
+    let secondPlayerType = 'human';
+
     function makeMove(cellIndex) {
         if (gameBoard[cellIndex] === '' && gameActive) {
             gameBoard[cellIndex] = currentPlayer;
@@ -20,12 +20,29 @@ ytufy6t
                 if (currentPlayer === 'X' && firstPlayerType === 'ai') {
                     setTimeout(makeAIMove, 500);
                 } else if (currentPlayer === 'O' && secondPlayerType === 'ai') {
-                    setTimeout(makeAIMove, 500);xza
+                    setTimeout(makeAIMove, 500);
                 }
             }
         }
     }
 
+    function makeAIMove() {
+        if (gameActive && currentPlayer === 'O' && secondPlayerType === 'ai' ||
+            gameActive && currentPlayer === 'X' && firstPlayerType === 'ai') {
+            let emptyCells = [];
+            for (let i = 0; i < gameBoard.length; i++) {
+                if (gameBoard[i] === '') {
+                    emptyCells.push(i);
+                }
+            }
+
+            if (emptyCells.length > 0) {
+                const randomIndex = Math.floor(Math.random() * emptyCells.length);
+                const aiMove = emptyCells[randomIndex];
+                makeMove(aiMove);
+            }
+        }
+    }
     function togglePlayer() {
         currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
     }
@@ -78,7 +95,7 @@ ytufy6t
         });
         document.getElementById('reset-button').addEventListener('click', resetBoard);
 
-        
+
         document.getElementById('first-player-select').addEventListener('change', function () {
             firstPlayerType = this.value;
             resetBoard();
