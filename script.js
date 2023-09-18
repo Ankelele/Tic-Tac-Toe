@@ -20,7 +20,7 @@ const TicTacToeGame = (function () {
                 if (currentPlayer === 'X' && firstPlayerType === 'ai') {
                     setTimeout(makeAIMove, 500);
                 } else if (currentPlayer === 'O' && secondPlayerType === 'ai') {
-                    setTimeout(makeAIMove, 500);
+                    setTimeout(makeAIMove, 500);xza
                 }
             }
         }
