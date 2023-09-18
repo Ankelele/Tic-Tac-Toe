@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script href defer src="script.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Tic-Tac-Toe</h1>
+    <div>
+        <label for="first-player-select">Choose Player X:</label>
+        <select id="first-player-select">
+            <option value="human">Human</option>
+            <option value="ai">AI</option>
+        </select>
+    </div>
+    <div>
+        <label for="second-player-select">Choose Player O:</label>
+        <select id="second-player-select">
+            <option value="human">Human</option>
+            <option value="ai">AI</option>
+        </select>
+    </div>
+    <div id="tic-tac-toe-board">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+    </div>
+    <p id="winner-text"></p>
+    <button id="reset-button">Reset</button>
+</body>
+
+</html>

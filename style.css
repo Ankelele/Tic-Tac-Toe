@@ -1,0 +1,43 @@
+body {
+    text-align: center;
+    font-family: cursive;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+#tic-tac-toe-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    border: 3px solid black;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 300px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    cursor: pointer;
+    border: 3px solid black;
+    font-size: 90px;
+}
+
+#winner-text {
+    font-size: 20px;
+}
+
+#reset-button,.start {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
